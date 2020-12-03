@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW6</title>
+</head>
+<body>
+ <!-- Task 1
+    <div id="test">First</div>
+    <script>
+        test.innerHTML="Last"; document.querySelector("div").innerHTML="Last2";
+    </script>;
+
+-->
+    
+<!-- Task 2 
+     <img class="image" src="dog.jpg">
+    <script> 
+        const img = document.querySelector('.image');
+        img.setAttribute('src', 'cat.img');
+        alert (img.outerHTML); 
+    </script>
+
+--> 
+
+<!-- Task 3 
+        <h2>Article header</h2>
+        <div id="text">
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+            <p>Third paragraph</p>
+        </div>
+    <p>Another text</p>
+    <script>
+        let x = document.querySelectorAll("#text p");
+        for (i=0; i<x.length; i++) {
+        console.log("Selector text " + i + ": " + x[i].innerHTML);
+    }
+    </script>-->
+
+ <!--Task 4 
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+    const list = document.querySelectorAll("#list li");
+    alert(list[0].innerHTML);
+    alert(list[4].innerHTML);
+    alert(list[1].innerHTML);
+    alert(list[3].innerHTML);
+    alert(list[2].innerHTML);
+   
+    console.log(document.getElementById("list").firstElementChild.innerHTML);
+    console.log(document.getElementById("list").lastElementChild.innerHTML);
+    console.log(document.getElementById("list").firstElementChild.nextElementSibling.innerHTML);
+    console.log(document.getElementById("list").lastElementChild.previousElementSibling.innerHTML);
+    console.log(document.getElementById("list").lastElementChild.previousElementSibling.previousElementSibling.innerHTML);
+    </script>-->
+   
+<!-- Task 5 
+    <h1> I'am a big header!</h1>
+    <div id="myDiv">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
+    </div>
+        <ul id="myList">
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal!</li>
+    </ul>
+    <span>Make me invisible, please!</span>
+    <script>
+        let header = document.querySelector("h1");
+        header.style.cssText = 
+        `background-color: SpringGreen;
+        font-size = 18px;
+        `
+        let x = document.querySelectorAll("#myDiv p");
+        x[0].style.fontWeight = "bold";
+        x[1].style.color = "red";
+        x[2].style.textDecoration = "underline";
+        x[3].style.fontStyle = "italic";
+        let list = document.querySelectorAll("#myList li");
+        list[0].style.display = "inline";
+        list[1].style.display = "inline";
+        list[1].style.marginLeft = "-0.5%"
+        list[2].style.display = "inline";
+        list[2].style.marginLeft = "-0.5%"
+
+
+        let span = document.querySelector("span");
+        span.style.visibility = "hidden";
+    </script>-->
+
+<!-- Task 6 
+
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+
+    <script>
+        let first = prompt("First massage");
+        let second = prompt("Second massage");
+        let value1 = document.querySelector("input");
+        
+        let value2 = document.querySelector("#input2");
+        
+        let changeInput = confirm("Do you want change places input value?");
+        if (changeInput === true)  {
+            value1.setAttribute("value", second);
+            value2.setAttribute("value", first);
+
+        } else {
+            value1.removeAttribute("value");
+        value1.setAttribute("value", first);
+        value2.removeAttribute("value");
+        value2.setAttribute("value", second);
+        }
+</script> -->
+
+<!-- Task 7 
+<script>
+    let body = document.createElement("body");
+    document.head.after(body);
+    let newMain = document.createElement("main");
+    newMain.className = "mainClass check item";
+    body.prepend(newMain);
+    let newDiv = document.createElement("div");
+    newDiv.id = "myDiv";
+    newMain.prepend(newDiv);
+    let newP = document.createElement("p");
+    newP.innerHTML = "First paragraph";
+    newDiv.prepend(newP);   
+    
+</script>-->
+
+</body>
+
+</html>
