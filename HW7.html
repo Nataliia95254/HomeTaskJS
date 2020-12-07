@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW 7</title>
+  </head>
+
+  <body>
+    <!-- ***************************************Task1***************************************************
+    <script>
+      let openTab = window.open("", "win", "width=300,height=300");
+      function resize() {
+        openTab.resizeTo(500, 500);
+      }
+      setTimeout(resize, 2000);
+      function move() {
+        openTab.moveTo(200, 200);
+      }
+      setTimeout(move, 4000);
+      function close() {
+        openTab.close();
+      }
+      setTimeout(close, 6000);
+    </script> -->
+
+    <!-- ***************************************Task2***************************************************
+    <p id="text">I learning JavaScript events!</p>
+    <div>
+      <button onclick="changeCSS()">Change style!</button>
+    </div>
+
+    <script>
+      function changeCSS() {
+        text.style.color = "orange";
+        text.style.fontSize = "20pt";
+        text.style.fontFamily = "Comic Sans MS";
+      }
+    </script>  -->
+
+    <!-- ***************************************Task3***************************************************
+    <button onclick="setBackground('blue')">Click to make the page blue.</button>
+    <button ondblclick="setBackground('pink')">Double-click to make the page pink.</button>
+    <button   onmousedown="setBackground('brown')" onmouseup="setBackground('white')">Click and hold to make the page brown.</button>
+    <a href="#" onmouseover="setBackground('yellow')" onmouseout="setBackground('white')">Hower over to make the page yellow.</a>
+    <script>
+       function setBackground (color) {
+           document.body.style.backgroundColor = color;
+       }
+    </script>  -->
+
+    <!-- ***************************************Task4*************************************************** 
+    
+      <select name="selectName" id="selectName">
+        <option value="0">Peter</option>
+        <option value="1">John</option>
+        <option value="2">Alise</option>
+        <option value="3">Alex</option>
+        <option value="4">Iren</option>
+      </select>
+      <button id="btn">Choose and Delete</button>
+      <script>
+        btn.addEventListener("click", deleteOption)
+        function  deleteOption () {
+          let n = document.getElementById("selectName").options.selectedIndex;
+          let val = document.getElementById("selectName").options[n].value;
+          let selectList = document.getElementById("selectName");
+          selectList.remove(n);
+        }
+      </script> -->
+
+    <!-- ***************************************Task5***************************************************
+
+    <button id="btn">Live button!</button>
+    <script>
+      function onClick() {
+        btn.insertAdjacentHTML('afterend', '<p> I was pressed!</p>');
+      }
+      function onMouseover() {
+        btn.insertAdjacentHTML('afterend', '<p> Mouse on me!</p>');
+      }
+      function onMouseout() {
+        btn.insertAdjacentHTML('afterend', '<p> Mouse is not on me!</p>');
+      }
+      
+      btn.addEventListener("click",onClick);
+      btn.addEventListener("mouseover",onMouseover);
+      btn.addEventListener("mouseout",onMouseout);
+    </script> -->
+    <!-- ***************************************Task6*************************************************** 
+      
+      <body onresize = "task6()">
+      <script>
+        function task6() {
+        let w = window.innerWidth
+        let h = window.innerHeight
+        document.body.innerHTML = "Width: " + w + ", height: " + h ;}
+      </script>
+    </body> -->
+
+    <!-- ***************************************Task7*************************************************** 
+    <select name="country" id="country" onChange="Add_option_to_select(), writeP ()">
+      <option value="ger">Germany</option>
+      <option value="usa">USA</option>
+      <option value="ukr">Ukraine</option>
+    </select>
+
+    <select name="cities" id="cities" onChange="writeP()"></select>
+
+    <p id="p"></p>
+
+    <p></p>
+    <script>
+      let germany = new Array("Berlin", "Hamburg", "Dortmund", "Frankfurt");
+      let usa = new Array("New-Yourk", "Washington", "Boston", "Chikago");
+      let ukrain = new Array("Lviv", "Kyiv", "Odessa", "Dnipro");
+      let len;
+
+      function Add_option_to_select() {
+        let CountryObj = document.getElementById("country");
+        let CitiesObj = document.getElementById("cities");
+        let selind = CountryObj.options.selectedIndex;
+        console.log(selind);
+        switch (selind) {
+          case 0:
+            CitiesObj.options.length = 0;
+            len = germany.length;
+
+            for (let n = 0; n < len; n++) {
+              CitiesObj[n] = new Option(germany[n], n);
+            }
+            console.log(CitiesObj.options.selectedIndex);
+            
+            
+            break;
+
+          case 1:
+            CitiesObj.options.length = 0;
+            len = usa.length;
+
+            for (let n = 0; n < len; n++) {
+              CitiesObj[n] = new Option(usa[n], n);
+            }
+            break;
+
+          case 2:
+            CitiesObj.options.length = 0;
+            len = ukrain.length;
+
+            for (let n = 0; n < len; n++) {
+              CitiesObj[n] = new Option(ukrain[n], n);
+            }
+            break;
+        }
+        
+        
+      }
+      function writeP () {
+        let e = document.getElementById("country");
+        let strUser = e.options[e.selectedIndex].text;
+        let s = document.getElementById("cities");
+        let strUser2 = s.options[s.selectedIndex].text;
+        p.innerHTML = (strUser + ", "+ strUser2);
+        }
+
+      
+    </script> -->
+  </body>
+</html>
